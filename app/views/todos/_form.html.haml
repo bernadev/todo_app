@@ -1,0 +1,18 @@
+.row-fluid
+  .span12
+    = form_for(@todo) do |f|
+      %fieldset
+        .row-fluid
+          .span4
+            .control-group
+              = f.label :title
+              .controls.span11
+                = f.text_field :title
+        .row-fluid
+          .span8
+            .control-group
+              = f.label :notes
+              .controls.span11
+                = f.text_area :notes
+        .actions
+          = f.submit
